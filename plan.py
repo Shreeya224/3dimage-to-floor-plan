@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 
 # Step 1: Load the 3D Image (Point Cloud)
 def load_point_cloud(file_path):
-    pcd= o3d.io.read_point_cloud('C:/Users/user/Desktop/Alecado Monk')
+    pcd= o3d.io.read_point_cloud(file_path)
     return pcd
-
+file_path = 'C:/Users/user/Desktop/Alecado Monk'  # Update with the actual file path
+pcd = load_point_cloud(file_path)
 
 # Step 2: Process the 3D Data
 def extract_features(pcd):
